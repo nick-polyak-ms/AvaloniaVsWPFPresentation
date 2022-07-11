@@ -1,0 +1,19 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<DataTemplate x:Key="HorizontalPersonTemplate">
+		<StackPanel Orientation="Horizontal">
+			<TextBlock Text="{Binding FirstName}"
+					   Margin="0,0,5,0"/>
+			<TextBlock Text="{Binding LastName}"/>
+		</StackPanel>
+	</DataTemplate>
+
+	<DataTemplate x:Key="VerticalPersonTemplate">
+		<Grid RowDefinitions="Auto,Auto">
+			<TextBlock Text="{Binding FirstName}"
+					   Margin="0,0,5,0"/>
+			<TextBlock Text="{Binding LastName}"
+					   Grid.Row="1"/>
+		</Grid>
+	</DataTemplate>
+</ResourceDictionary>

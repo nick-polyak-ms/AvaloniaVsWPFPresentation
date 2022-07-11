@@ -1,0 +1,30 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:local="clr-namespace:AvaloniaContentPresenterSample"
+		Width="400"
+		Height="200"
+        x:Class="AvaloniaContentPresenterSample.MainWindow"
+        Title="AvaloniaContentPresenterSample">
+	<Window.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceInclude Source="avares://AvaloniaContentPresenterSample/Themes/DataTemplates.axaml"/>
+			</ResourceDictionary.MergedDictionaries>
+			<local:Person x:Key="ThePerson" 
+						  FirstName="Joe"
+						  LastName="Doe"/>
+		</ResourceDictionary>
+	</Window.Resources>
+	<Grid ColumnDefinitions="*,*">
+		<ContentPresenter Content="{StaticResource ThePerson}"
+						  ContentTemplate="{StaticResource VerticalPersonTemplate}"
+						  HorizontalAlignment="Center"
+						  VerticalAlignment="Center"/>
+
+		<ContentPresenter Content="{StaticResource ThePerson}"
+						  ContentTemplate="{StaticResource HorizontalPersonTemplate}"
+						  Grid.Column="1"
+						  HorizontalAlignment="Center"
+						  VerticalAlignment="Center"/>
+	</Grid>
+</Window>
