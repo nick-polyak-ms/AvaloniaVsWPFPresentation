@@ -1,0 +1,30 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:local="clr-namespace:AvaloniaStyleSample"
+		Width="400"
+		Height="200"
+        x:Class="AvaloniaStyleSample.MainWindow"
+        Title="AvaloniaStyleSample">
+	<Window.Styles>
+		<StyleInclude Source="avares://AvaloniaStyleSample/Themes/MyStyles.axaml"/>
+	</Window.Styles>
+	
+	<Grid RowDefinitions="*,*" 
+		  ColumnDefinitions="*,*">
+		<TextBlock Text="Red Large"
+				   Classes="Red Large"/>
+
+		<TextBlock Text="Red Small"
+				   Classes="Red Small"
+				   Grid.Column="1"/>
+
+		<TextBlock Text="Blue Large"
+				   Classes="Blue Large"
+				   Grid.Row="1"/>
+
+		<TextBlock Text="Blue Small"
+				   Classes="Blue Small"
+				   Grid.Row="1"
+				   Grid.Column="1"/>
+	</Grid>
+</Window>

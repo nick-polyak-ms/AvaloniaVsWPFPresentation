@@ -1,0 +1,30 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+	<Style Selector="TextBlock">
+		<Setter Property="HorizontalAlignment"
+				Value="Center"/>
+		<Setter Property="VerticalAlignment"
+				Value="Center"/>
+	</Style>
+	
+	<Style Selector="TextBlock.small">
+		<Setter Property="FontSize"
+				Value="10"/>
+	</Style>
+	
+	<Style Selector="TextBlock.Large">
+		<Setter Property="FontSize"
+				Value="20"/>
+	</Style>
+
+	<Style Selector="TextBlock.Blue">
+		<Setter Property="Foreground"
+				Value="Blue"/>
+	</Style>
+
+	<Style Selector="TextBlock.Red">
+		<Setter Property="Foreground"
+				Value="Red"/>
+	</Style>
+</Styles>
