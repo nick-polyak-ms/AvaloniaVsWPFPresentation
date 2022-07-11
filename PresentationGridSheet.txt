@@ -1,0 +1,20 @@
+1. Show how to install Avalonia
+
+2. Create first Avalonia project change the text - show using Content property
+   of the window. Set width and height of the window for it to be of normal size
+   point out extension - axaml
+   Start the app and show the tool
+   point the events
+         a single Avalonia Routed event can both tunnel and bubble while in
+         WPF it is either or. So WPF relies on "Preview" name pattern for
+         preview tunneling events that e.g. allow to cancel the main event
+         while in Avalonia the same event can have two passes - tunneling
+         and bubbling
+   Avalonia tool downside - cannot drill down or display bindings
+   or call methods
+
+   Show the files. One extra generated file - Program.cs.
+   Usually one does not need to touch it
+
+   Usually (like in WPF) one creates a grid or a panel in Avalonia Window
+   and adds some elements to it (show).
