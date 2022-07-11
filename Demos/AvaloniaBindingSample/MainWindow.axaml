@@ -1,0 +1,28 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:local="clr-namespace:AvaloniaBindingSample"
+		Width="400"
+		Height="300"
+		local:AttachedProps.TheText="Hello ComposeUI Team!"
+		Tag="We'll build a better product than Electron!"
+        x:Class="AvaloniaBindingSample.MainWindow"
+        Title="AvaloniaBindingSample">
+	<Grid RowDefinitions="*,*,*">
+		<TextBlock Text="{Binding $parent[Window].(local:AttachedProps.TheText)}"
+				   HorizontalAlignment="Center"
+				   VerticalAlignment="Center"/>
+
+		<TextBlock x:Name="MiddleText"
+				   Text="{Binding $parent[Window].Tag}"
+				   Grid.Row="1"
+				   HorizontalAlignment="Center"
+				   VerticalAlignment="Center"/>
+
+		<TextBlock x:Name="BottomText"
+				   Text="{Binding #MiddleText.Text}"
+				   Grid.Row="2"
+				   HorizontalAlignment="Center"
+				   VerticalAlignment="Center"/>
+
+	</Grid>
+</Window>
